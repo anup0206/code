@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #5f5f5f;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 6px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /* height: 50px; */
+}
+
+.logo img {
+    width: 30px;
+    margin-right: 15px;
+    display: block;
+}
+
+
+
+.navbar-center {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Vertically align items */
+}
+
+.navbar-center ul {
+    display: flex; /* Align the list items in a row */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar-center ul li {
+    margin: 0 10px; /* Space between the menu items */
+}
+
+.navbar-center ul li a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 5px 8px;
+    padding: 5px 8px; /* Ensure padding for hover effect */
+    position: relative;
+    text-align: center; /* Ensure text alignment */
+}
+
+
+.navbar-center ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #045be6;
+    position: absolute;
+    left: 50%;  /* Start from the center */
+    bottom: -2px; /* Ensure it’s under the text */
+    transition: width 0.3s ease-in-out;
+    transform: translateX(-50%); /* Center the line */
+}
+
+.navbar-center ul li a:hover::after , 
+.navbar-center ul li a.active-link::after{
+    width: 100%;
+    left: 0; /* Make it expand fully */
+    transform: none; /* Remove centering */
+}
+
+.nav-profile-img {
+    width: 40px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+
+.online{
+    position: relative;
+
+}
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    right: 0px;
+    top: 0px;
+    background: #41db51;
+    position: absolute;
+
+}
+.search-box{
+    background: #f0f2f5;
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+
+}
+.navbar-left{
+    display: flex;
+    align-items: center;
+}
+.search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    border: 0;
+    
+}

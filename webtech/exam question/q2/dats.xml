@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Persons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="person.xsd">
+    <Person>
+        <Name>Ram</Name>
+        <Age>15</Age>
+        <Pincode>123</Pincode>
+    </Person>
+    <Person>
+        <Name>Shyam</Name>
+        <Age>18</Age>
+        <Pincode>456</Pincode>
+    </Person>
+</Persons>

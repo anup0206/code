@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/home/anupam/code/webtech/student.xsl"?>
+<students>
+    <student>
+        <id>1</id>
+        <name>John</name>
+        <grade>A</grade>
+    </student>
+    <student>
+        <id>2</id>
+        <name>Alice</name>
+        <grade>B</grade>
+    </student>
+    <student>
+        <id>3</id>
+        <name>Bob</name>
+        <grade>C</grade>
+    </student>
+    <student>
+        <id>4</id>
+        <name>Eve</name>
+        <grade>A</grade>
+    </student>
+    <student>
+        <id>5</id>
+        <name>Michael</name>
+        <grade>B</grade>
+    </student>
+</students>

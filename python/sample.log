@@ -1,0 +1,6 @@
+2025-03-30 10:15:22 INFO User 'luffy' logged in successfully.
+2025-03-30 10:16:45 WARNING Low disk space on /dev/sda1.
+2025-03-30 10:18:10 ERROR Failed to connect to database.
+2025-03-30 10:20:05 DEBUG Checking user authentication tokens.
+2025-03-30 10:25:30 INFO Python can explain this question.
+2025-03-30 10:30:50 ERROR Network timeout while connecting to API.   

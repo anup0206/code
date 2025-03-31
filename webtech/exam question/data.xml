@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Butwal xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+  <employee>
+    <username>Anupam123</username>
+    <post>Chairman</post>
+    <salary>50000</salary>
+    <gender>Male</gender>
+    <address>  
+      <temporary>Butwal</temporary>
+      <permanent>Sunwal</permanent>
+    </address>
+    <password>p@ssw0rd</password>
+  </employee>
+  <ID>12345</ID>
+</Butwal>

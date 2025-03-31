@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<school>
+    <student>
+        <name>Anupam Baral</name>
+        <age>10</age>
+        <class>8</class>
+        <rollno>070000</rollno>
+        <email>anupam0206@gmail.com</email>
+        <address>Butwal</address>
+    </student>
+
+    <student>
+        <name>Anisha Baral</name>
+        <age>11</age>
+        <class>8</class>
+        <rollno>000008</rollno>
+        <email>anisha0206@gmail.com</email>
+        <address>Sunwal</address>
+    </student>
+
+    <student>
+        <name>Aarushi Baral</name>
+        <age>15</age>
+        <class>9</class>
+        <rollno>200000</rollno>
+        <email>aarusshi66@gmail.com</email>
+        <address>Butwal</address>
+    </student>
+</school>

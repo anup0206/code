@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1A1A2E;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    color: #00BFFF;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+.resume {
+    background-color: #00BFFF;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+
+main {
+    text-align: center;
+    padding: 50px;
+}
+
+.highlight {
+    color: #00BFFF;
+}
+
+.cta-button {
+    background-color: #00BFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
