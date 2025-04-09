@@ -217,15 +217,15 @@
 
 
 
-# import shutil
+import shutil
 
-# file_path = "copy.log"
-# backup_path = file_path + ".bak"
+file_path = "copy.log"
+backup_path = file_path + ".bak"
 
-# try:
-#     shutil.copy(file_path, backup_path)  # Create a backup
-#     open(file_path, "w").close()  # Wipe the content
-#     print(f"Content of '{file_path}' has been wiped out. Backup saved as '{backup_path}'.")
-# except Exception as e:
-#     print(f"Error: {e}")
+try:
+    shutil.copy(file_path, backup_path)  # Create a backup
+    open(file_path, "w").close()  # Wipe the content
+    print(f"Content of '{file_path}' has been wiped out. Backup saved as '{backup_path}'.")
+except Exception as e:
+    print(f"Error: {e}")
     

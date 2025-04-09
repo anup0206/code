@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="login-container">
         <h2>Login</h2>
-        <form action="" method="post"> <!-- Fixed form action -->
+        <form action="" method="post"> 
 
             <input type="text" name="username" class="input-field" placeholder="Username" required><br>
             
