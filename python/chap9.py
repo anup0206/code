@@ -161,9 +161,13 @@
 #     des.write(line)
 #     line = org.readline()
 # org.close()
-# des.close(
+# des.close()
 
-import filecmp
+
+
+
+
+# import filecmp
 # org = "sample.log"
 # des = "copy.log"
 
@@ -172,26 +176,56 @@ import filecmp
 # else :
 #     print("file are different")
 
-def compare_files(file1, file2):
-    with open(file1, "r", encoding="utf-8") as f1, open(file2, "r", encoding="utf-8") as f2:
-        line_num = 1
-        for line1, line2 in zip(f1, f2):
-            if line1 != line2:  # Check if lines are different
-                print(f"Files are different at line {line_num}")
-                print(f"Line in {file1}: {line1}")
-                print(f"Line in {file2}: {line2}")
-                return False
-            line_num += 1
+# def compare_files(file1, file2):
+#     with open(file1, "r", encoding="utf-8") as f1, open(file2, "r", encoding="utf-8") as f2:
+#         line_num = 1
+#         for line1, line2 in zip(f1, f2):
+#             if line1 != line2:  # Check if lines are different
+#                 print(f"Files are different at line {line_num}")
+#                 print(f"Line in {file1}: {line1}")
+#                 print(f"Line in {file2}: {line2}")
+#                 return False
+#             line_num += 1
         
-        # If one file is longer than the other
-        if f1.readline() or f2.readline():
-            print("Files have different lengths")
-            return False
+#         # If one file is longer than the other
+#         if f1.readline() or f2.readline():
+#             print("Files have different lengths")
+#             return False
         
-        print("Files are identical")
-        return True
+#         print("Files are identical")
+#         return True
 
-file1 = "sample.log"
-file2 = "copy.log"
-compare_files(file1, file2)
+# file1 = "sample.log"
+# file2 = "copy.log"
+# compare_files(file1, file2)
 
+
+# import os
+
+# file_path = "copy.log"
+
+# if os.path.exists(file_path):
+#     try:
+#         os.remove(file_path)
+#         print("File deleted successfully.")
+#     except PermissionError:
+#         print("Permission denied: Unable to delete the file.")
+#     except OSError as e:
+#         print(f"Error deleting file: {e}")
+# else:
+#     print("File not found.")
+
+
+
+# import shutil
+
+# file_path = "copy.log"
+# backup_path = file_path + ".bak"
+
+# try:
+#     shutil.copy(file_path, backup_path)  # Create a backup
+#     open(file_path, "w").close()  # Wipe the content
+#     print(f"Content of '{file_path}' has been wiped out. Backup saved as '{backup_path}'.")
+# except Exception as e:
+#     print(f"Error: {e}")
+    
