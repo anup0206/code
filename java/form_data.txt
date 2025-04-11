@@ -1,9 +1,0 @@
-Name: Anupam baral
-Email: alinedtwins@gmail.com
-Phone: +9779767606302
-Gender: Male
-Country: India
-Shift: Morning
-Message: Currently learning python baby
-Remarks: moshi mos
----------------
