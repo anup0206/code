@@ -48,5 +48,19 @@
 
 
 
+# # List of numbers
+# nums = [5, 6, 7, 9, 0, 90, 55, 60, 15, 54, 69]
+
+# # print("Numbers divisible by 5 using for loop:")
+# # for num in nums:
+# #     if num % 5 == 0:
+# #         print(num)
+
+# # Using filter() and lambda to filter numbers divisible by 5
+# div_by_5 = list(filter(lambda x: x % 5 == 0, nums))
+# print("\nNumbers divisible by 5 using filter and lambda:")
+# print(div_by_5)
+
+
 
 

@@ -6,4 +6,4 @@ def factorial(num):
         return num * factorial(num -1)
 
 num = int(input("Enter the number to fimd factorial : "))
-print(f"The factorial of {num} is {factorial(num)}")
+print(f"The factorial of {num} is{factorial(num)}")
