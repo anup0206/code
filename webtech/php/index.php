@@ -10,6 +10,7 @@
     <form method="post">
         <label for ="percentage">Percentage :</label>
         <input type="number" name="percentage" placeholder="Enter the percentage" required>
+        <br><br>
 
         <button type="submit">calculate</button>
     </form>
@@ -19,29 +20,22 @@
 </html>
 <?php 
     $percentage = $_POST['percentage'];
-    if($percentage >100 ){
-        if($percentage < 0){
-            echo "Please enter the valid number !!!";
-        }
-    }
-    else{
-        if($percentage >= 90){
-            echo "Youhave scored A+";
-        }
-        elseif($percentage >80 || $percentage <90){
-            echo "Youhave scored A";
-        }
-        elseif($percentage >70 || $percentage < 80){
-            echo "Youhave scored B+";
-        }
-        elseif($percentage >60 || $percentage < 70){
-            echo "Youhave scored B";
-        }
-        else {
-            echo"You are fail";
+    if($percentage >100 || $percentage < 0 ){
+        echo "Please enter the valid number !!!";
+    } else{
+        if($percentage >= 90)
+            $grade = "A+";
+        else if($percentage >80)
+            $grade = "A";
+        else if($percentage >70 )
+            $grade = "B+";
+        else if($percentage >60)
+            $grade = "B";
+        else
+            $grade = "fail";
 
-        }
+        echo "<p>Your percentage: $percentage</p>";
+        echo "<p>Your grade: $grade</p>";
     }
-    
  ?>
 
