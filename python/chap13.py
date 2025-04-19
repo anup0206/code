@@ -63,4 +63,7 @@
 
 
 
-
+# from functools import reduce
+# nums = [5, 6, 7, 9, 0, 90, 55, 60, 15, 54, 69]
+# max = reduce(lambda x, y: x if x > y else y , nums )
+# print(max)
