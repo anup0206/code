@@ -67,3 +67,67 @@
 # nums = [5, 6, 7, 9, 0, 90, 55, 60, 15, 54, 69]
 # max = reduce(lambda x, y: x if x > y else y , nums )
 # print(max)
+
+
+# from flask import Flask
+
+# app = Flask(__name__)
+
+# @app.route("/")
+# def hello_world():
+#     return "<p>Hello, World!</p>"
+# app.run()
+
+# from flask import Flask, request
+
+# app = Flask(__name__)
+
+# @app.route('/')
+# def form():
+#     return '''
+#         <form method="POST" action="/greet">
+#             <label>Your name: <input type="text" name="username"></label>
+#             <input type="submit">
+#         </form>
+#     '''
+
+# @app.route('/greet', methods=['POST'])
+# def greet():
+#     name = request.form['username']
+#     return f"Hello, {name}!"
+    
+# app.run(debug=True)
+
+from flask import Flask, render_template_string, request
+
+app = Flask(__name__)
+
+# Predefined user credentials
+valid_username = "user"
+valid_password = "password123"
+
+# Login page
+@app.route('/')
+def login_form():
+    return render_template_string('''
+        <form method="POST" action="/login">
+            <label>Username: <input type="text" name="username"></label><br>
+            <label>Password: <input type="password" name="password"></label><br>
+            <input type="submit" value="Login">
+        </form>
+    ''')
+
+# Handle login POST request
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.form['username']
+    password = request.form['password']
+    
+    # Check if the credentials match
+    if username == valid_username and password == valid_password:
+        return f"Welcome, {username}!"
+    else:
+        return "Invalid username or password. Please try again."
+
+app.run(debug=True)
+
