@@ -98,36 +98,36 @@
     
 # app.run(debug=True)
 
-from flask import Flask, render_template_string, request
+# from flask import Flask, render_template_string, request
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
-# Predefined user credentials
-valid_username = "user"
-valid_password = "password123"
+# # Predefined user credentials
+# valid_username = "user"
+# valid_password = "password123"
 
-# Login page
-@app.route('/')
-def login_form():
-    return render_template_string('''
-        <form method="POST" action="/login">
-            <label>Username: <input type="text" name="username"></label><br>
-            <label>Password: <input type="password" name="password"></label><br>
-            <input type="submit" value="Login">
-        </form>
-    ''')
+# # Login page
+# @app.route('/')
+# def login_form():
+#     return render_template_string('''
+#         <form method="POST" action="/login">
+#             <label>Username: <input type="text" name="username"></label><br>
+#             <label>Password: <input type="password" name="password"></label><br>
+#             <input type="submit" value="Login">
+#         </form>
+#     ''')
 
-# Handle login POST request
-@app.route('/login', methods=['POST'])
-def login():
-    username = request.form['username']
-    password = request.form['password']
+# # Handle login POST request
+# @app.route('/login', methods=['POST'])
+# def login():
+#     username = request.form['username']
+#     password = request.form['password']
     
-    # Check if the credentials match
-    if username == valid_username and password == valid_password:
-        return f"Welcome, {username}!"
-    else:
-        return "Invalid username or password. Please try again."
+#     # Check if the credentials match
+#     if username == valid_username and password == valid_password:
+#         return f"Welcome, {username}!"
+#     else:
+#         return "Invalid username or password. Please try again."
 
-app.run(debug=True)
+# app.run(debug=True)
 
