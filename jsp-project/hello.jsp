@@ -7,3 +7,4 @@
     <p>Welcome, <%= user %>!</p>
 </body>
 </html>
+
