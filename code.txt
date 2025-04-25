@@ -1,0 +1,8 @@
+pacman -Qs | grep -E 'gnome|xfce|kde|i3'
+
+
+sudo pacman -S xfce4 xfce4-goodies
+
+sudo systemctl start lightdm
+
+startx
