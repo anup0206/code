@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Roboto', sans-serif;
+    }
+    .form-container {
+      max-width: 600px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .form-field {
+      margin-bottom: 1.5rem;
+      transform: translateX(-20px);
+      opacity: 0;
+      animation: slideIn 0.5s ease forwards;
+      animation-delay: calc(0.1s * var(--index));
+    }
+    @keyframes slideIn {
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .form-header {
+      background: linear-gradient(90deg, #6b46c1, #9f7aea);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 12px 12px 0 0;
+      margin: -2rem -2rem 2rem -2rem;
+    }
+    input, select, textarea {
+      transition: all 0.3s ease;
+      border: 2px solid #e2e8f0;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #6b46c1;
+      box-shadow: 0 0 8px rgba(107, 70, 193, 0.3);
+    }
+    .submit-btn {
+      background: #6b46c1;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    .submit-btn:hover {
+      background: #553c9a;
+      transform: scale(1.05);
+      animation: none;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    .required::after {
+      content: '*';
+      color: #e53e3e;
+      margin-left: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-header">
+      <h1 class="text-2xl font-bold">Feedback Form</h1>
+    </div>
+    <form id="feedbackForm" action="submit.php" method="POST">
+      <div class="form-field" style="--index: 1">
+        <label for="name" class="required block text-sm font-medium text-gray-700">Name</label>
+        <input type="text" id="name" name="name" class="mt-1 w-full p-2 border rounded-md" required>
+      </div>
+      <div class="form-field" style="--index: 2">
+        <label for="email" class="required block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" id="email" name="email" class="mt-1 w-full p-2 border rounded-md" required>
+      </div>
+      <div class="form-field" style="--index: 3">
+        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+        <input type="tel" id="phone" name="phone" class="mt-1 w-full p-2 border rounded-md">
+      </div>
+      <div class="form-field" style="--index: 4">
+        <label for="feedback_type" class="required block text-sm font-medium text-gray-700">Feedback Type</label>
+        <select id="feedback_type" name="feedback_type" class="mt-1 w-full p-2 border rounded-md" required>
+          <option value="">Select an option</option>
+          <option value="suggestion">Suggestion</option>
+          <option value="complaint">Complaint</option>
+          <option value="praise">Praise</option>
+        </select>
+      </div>
+      <div class="form-field" style="--index: 5">
+        <label for="satisfaction" class="required block text-sm font-medium text-gray-700">How satisfied are you with our service?</label>
+        <div class="mt-2 space-y-2">
+          <label class="flex items-center"><input type="radio" name="satisfaction" value="very-satisfied" class="mr-2" required> Very Satisfied</label>
+          <label class="flex items-center"><input type="radio" name="satisfaction" value="satisfied" class="mr-2"> Satisfied</label>
+          <label class="flex items-center"><input type="radio" name="satisfaction" value="neutral" class="mr-2"> Neutral</label>
+          <label class="flex items-center"><input type="radio" name="satisfaction" value="dissatisfied" class="mr-2"> Dissatisfied</label>
+        </div>
+      </div>
+      <div class="form-field" style="--index: 6">
+        <label for="comments" class="block text-sm font-medium text-gray-700">Additional Comments</label>
+        <textarea id="comments" name="comments" rows="4" class="mt-1 w-full p-2 border rounded-md"></textarea>
+      </div>
+      <button type="submit" class="submit-btn text-white px-6 py-2 rounded-md">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      try {
+        const response = await fetch('submit.php', {
+          method: 'POST',
+          body: formData
+        });
+        const result = await response.json();
+        alert(result.message);
+        if (result.success) form.reset();
+      } catch (error) {
+        alert('Error submitting form. Please try again.');
+      }
+    });
+  </script>
+</body>
+</html>
