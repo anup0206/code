@@ -64,7 +64,7 @@ def main():
 
         elif 'anime' in query:
             speak("Opening Anime")
-            webbrowser.open("https://www.kisskh.com")
+            webbrowser.open("https://www.kisskh.co")
 
         elif 'exit' in query or 'quit' in query:
             speak("Goodbye!")
