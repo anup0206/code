@@ -21,9 +21,10 @@ def greet():
 
     elif hour < 18:
         speak("Good afternoon!")
-        
+
     else:
         speak("Good evening!")
+        
     speak("I am Jarvis. How can I help you?")
 
 def take_command():
