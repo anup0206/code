@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,6 @@
     <title>Calculate Marks</title>
 <body>
     <div class="form-container">
-
     <form method="post">
         <label for ="percentage">Percentage :</label>
         <input type="number" name="percentage" placeholder="Enter the percentage" required>
@@ -15,7 +13,6 @@
         <button type="submit">calculate</button>
     </form>
     </div>
-
 </body>
 </html>
 <?php 
