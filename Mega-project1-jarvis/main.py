@@ -18,9 +18,10 @@ def greet():
     hour = datetime.datetime.now().hour
     if hour < 12:
         speak("Good morning!")
-        
+
     elif hour < 18:
         speak("Good afternoon!")
+        
     else:
         speak("Good evening!")
     speak("I am Jarvis. How can I help you?")
