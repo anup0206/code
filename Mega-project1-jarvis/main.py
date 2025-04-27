@@ -63,7 +63,6 @@ def main():
         elif 'open youtube' in query:
             speak("Opening Youtube")
             webbrowser.open("https://www.youtube.com")
-
         elif 'anime' in query:
             speak("Opening Anime")
             webbrowser.open("https://www.kisskh.co")
