@@ -39,10 +39,11 @@ def take_command():
     except Exception as e:
         print("Sorry, I didn't catch that.")
         return ""
-        
+
     return query.lower()
 
 def main():
+    
     greet()
     while True:
         query = take_command()
