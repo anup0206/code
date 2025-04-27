@@ -71,7 +71,6 @@ def main():
         elif 'exit' in query or 'quit' in query:
             speak("Goodbye!")
             break
-
         elif query:
             speak("I'm not sure how to help with that yet.")
 
