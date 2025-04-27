@@ -59,7 +59,6 @@ def main():
         elif 'open facebook' in query:
             speak("Opening Facebook")
             webbrowser.open("https://www.facebook.com")
-
         elif 'open youtube' in query:
             speak("Opening Youtube")
             webbrowser.open("https://www.youtube.com")
