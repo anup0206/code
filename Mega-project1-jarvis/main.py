@@ -27,6 +27,7 @@ def greet():
 def take_command():
     """Listens for voice input and returns text"""
     r = sr.Recognizer()
+    
     with sr.Microphone() as source:
         print("Listening...")
         r.pause_threshold = 1
