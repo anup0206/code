@@ -27,7 +27,7 @@ def greet():
 def take_command():
     """Listens for voice input and returns text"""
     r = sr.Recognizer()
-    
+
     with sr.Microphone() as source:
         print("Listening...")
         r.pause_threshold = 1
@@ -39,6 +39,7 @@ def take_command():
     except Exception as e:
         print("Sorry, I didn't catch that.")
         return ""
+        
     return query.lower()
 
 def main():
