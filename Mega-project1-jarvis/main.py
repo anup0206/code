@@ -61,6 +61,9 @@ def main():
         elif 'open youtube' in query:
             speak("Opening Youtube")
             webbrowser.open("https://www.youtube.com")
+        elif 'open youtube' in query:
+            speak("Opening Youtube")
+            webbrowser.open("https://www.youtube.com")
 
         elif 'exit' in query or 'quit' in query:
             speak("Goodbye!")
