@@ -63,7 +63,7 @@ def main():
             webbrowser.open("https://www.youtube.com")
 
         elif 'anime' in query:
-            speak("Opening Youtube")
+            speak("Opening ")
             webbrowser.open("https://www.youtube.com")
 
         elif 'exit' in query or 'quit' in query:
