@@ -18,13 +18,10 @@ def greet():
     hour = datetime.datetime.now().hour
     if hour < 12:
         speak("Good morning!")
-
     elif hour < 18:
         speak("Good afternoon!")
-
     else:
         speak("Good evening!")
-        
     speak("I am Jarvis. How can I help you?")
 
 def take_command():
@@ -35,20 +32,17 @@ def take_command():
         print("Listening...")
         r.pause_threshold = 1
         audio = r.listen(source)
-
     try:
         print("Recognizing...")
         query = r.recognize_google(audio)
         print(f"You said: {query}")
-
     except Exception as e:
         print("Sorry, I didn't catch that.")
         return ""
-
+        
     return query.lower()
 
 def main():
-
     greet()
     while True:
         query = take_command()
