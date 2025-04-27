@@ -54,6 +54,10 @@ def main():
             speak("Opening Google")
             webbrowser.open("https://www.google.com")
 
+        elif 'open facebook' in query:
+            speak("Opening Facebook")
+            webbrowser.open("https://www.facebook.com")
+
         elif 'exit' in query or 'quit' in query:
             speak("Goodbye!")
             break
