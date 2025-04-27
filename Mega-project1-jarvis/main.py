@@ -31,7 +31,6 @@ def take_command():
         print("Listening...")
         r.pause_threshold = 1
         audio = r.listen(source)
-
     try:
         print("Recognizing...")
         query = r.recognize_google(audio)
