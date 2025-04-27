@@ -36,6 +36,7 @@ def take_command():
         print("Recognizing...")
         query = r.recognize_google(audio)
         print(f"You said: {query}")
+        
     except Exception as e:
         print("Sorry, I didn't catch that.")
         return ""
@@ -43,7 +44,7 @@ def take_command():
     return query.lower()
 
 def main():
-    
+
     greet()
     while True:
         query = take_command()
