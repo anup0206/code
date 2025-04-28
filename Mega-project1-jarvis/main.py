@@ -51,7 +51,6 @@ def main():
         if 'time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M")
             speak(f"The time is {strTime}")
-
         elif 'open google' in query:
             speak("Opening Google")
             webbrowser.open("https://www.google.com")
